@@ -1,0 +1,47 @@
+﻿body {
+    background-color: #5685B1;
+    color: white;
+}
+
+#logo {
+    width: 400px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#tit {
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    display: inline-block;
+}
+
+#sub {
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+card {
+    background-color: #DAEDFF;
+    border: 3px solid;
+    height:20px;
+    width: auto;
+    justify-content: center;
+    position: center;
+}
+
+#ent {
+    color: white;
+    justify-content: center;
+    position: center;
+
+}
+
+#btn {
+    background-color: #DAEDFF;
+    border-radius: 5px;
+    color: #5685B1;
+}

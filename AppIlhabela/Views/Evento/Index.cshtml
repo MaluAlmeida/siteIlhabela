@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model IEnumerable<Praias>
+@{
+    ViewBag.Title = "Eventos nas Praias";
+}
+
+<h2>Descubra os principais eventos que estão acontecendo nas praias!</h2>
+
+<select id="beachSelect" onchange="redEventPraia()">
+    <option value="">Selecione a praia</option>
+    @foreach (var beach in ViewBag.Beaches)
+    {
+        <option value="@Url.Action("BeachEvents", "Event", new { beachName = beach })">@beach</option>
+    }
+</select>
+
+<div class="events-grid">
+    @foreach (var eventItem in Model)
+    {
+        <div class="event-item">
+            <p>@eventItem.nome</p>
+        </div>
+    }
+</div>
+
+<script>
+    function validar() {
+
+        //chama a tela do index
+        window.open('Evento/BeachEvents');
+        //fecha a tela login
+        window.close('Evento/Index');
+}
+</script>
+
+<style>
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .event-item {
+        text-align: center;
+    }
+
+    .event-item img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
